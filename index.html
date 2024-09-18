@@ -1,33 +1,190 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c32f024528.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <!-- logo -->
-     
-    <div id="header">
-        <div class="container">
-            <div id="logo" class="homepage">
-                <img  src= "image\Screenshot (142).png" class="logo" />
-                <ul>
-                    <li><a href="#A">Home</a></li>
-                    <li><a href="#B">About</a></li>
-                    <li><a href="#C">Project</a></li>
-                    <li><a href="#D">Contact</a></a></li>
-                </ul>
-            </div>
-            </div>
-            <div id="About">
-                <div class="container">
-                            <img src= "image/photo.png">
-                        </div>
 
-                        </div>
-                    </div>
-                </div>
-                </div>
+<body class="bgimg">
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="image/logo.png" alt="Logo" />
+        <ul>
+            <li><a href="#A">Home</a></li>
+            <li><a href="#B">About</a></li>
+            <li><a href="#C">Signup</a></li>
+            <li><a href="#D">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- Hero Section with Video Slider -->
+    <section class="hero-section">
+        <div class="hero-slider">
+            <div class="slide">
+                <video src="video/videoC.mp4" autoplay muted loop></video>
+            </div>
+            <div class="slide">
+                <video src="video/videoA.mp4" autoplay muted loop></video>
+            </div>
+            <div class="slide">
+                <video src="videos/videoB.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+
+
+
+    <section class="image-boxes-section">
+        <div class="content-wrapper">
+            <!-- Image on the Left -->
+            <div class="image-container-left">
+                <img src="image\Clipped_image_20240918_202717.png" alt="Left Side Image">
+            </div>
     
+            <!-- 6 Boxes on the Right with Different Colors -->
+            <div class="boxes-container">
+                <div class="box box-1">Events Base <br>Solution</div>
+                <div class="box box-2">Fashion Consultation - <br>Just @999</div>
+                <div class="box box-3">Bandawagon of <br>trend</div>
+                <div class="box box-4">Event Management <br>Apparael Needs</div>
+                <div class="box box-5">Xclusive Flifft store <br>6 month wareenty on <br>all purchase</div>
+                <div class="box box-6">Shop with <br>Recknown Brand</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Name -->
+    <h2 class="category-heading">EVENTS</h2>
+
+    <!-- Items Container -->
+    <div class="items-container">
+        <div class="item">
+            <a href="/similar-items/item1" target="_blank">
+                <div class="image-container">
+                    <img src="image\wedding-6595090_1280.jpg" alt="Item 1" class="item-image">
+                    <div class="category-label">WEDDING</div>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/similar-items/item2" target="_blank">
+                <div class="image-container">
+                    <img src="image\istockphoto-1196528669-1024x1024.jpg" alt="Item 2" class="item-image">
+                    <div class="category-label">Honeymoon</div>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/similar-items/item3" target="_blank">
+                <div class="image-container">
+                    <img src="image\woman-7370502_1280.jpg" alt="Item 3" class="item-image">
+                    <div class="category-label">Formal</div>
+                </div>
+        
+            </a>
+        </div>
+        <!-- Add more items as needed -->
+    </div>
+
+    <!-- Section Above the Purple Section with Left Side Image and 6 Colored Boxes on the Right -->
+
+<!-- New Section with Purple Background and Image on the Right -->
+<section class="purple-section">
+    <div class="content-wrapper">
+        <!-- Content on the Left -->
+        <div class="content-container">
+            <h2>Your Style Guru</h2>
+            <p>Book your session and change your style game. <br> Book @999 only </p>
+            <button>Click Me</button>
+        </div>
+
+        <!-- Image on the Right -->
+        <div class="image-container">
+            <img src="image\Clipped_image_20240918_200513.png" alt="Right-side">
+        </div>
+    </div>
+</section>
+
+<!-- Social Media and Contact Form Section -->
+<section class="social-form-section">
+    <div class="content-wrapper">
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>saksheesingh742@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-square-phone"></i>+91 7761073875</p>
+                <div class="social-icons"></div>
+                <a href="https://www.linkedin.com/in/sakshee-singh-700655213"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/Sakshee30"><i class="fa-brands fa-instagram"></i></a>
+                
+            </div>
+        </div>
+            <div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        if (index >= totalSlides) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        const offset = -currentSlide * 100;
+        document.querySelector('.hero-slider').style.transform = `translateX(${offset}vw)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Initialize the slider to show the first slide
+    showSlide(currentSlide);
+</script>
 </body>
 </html>
