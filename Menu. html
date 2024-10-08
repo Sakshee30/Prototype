@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Selection Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Gender Selection Form -->
+        <form action="/submit" method="post">
+            <!-- Dropdown for Male -->
+            <div class="dropdown">
+                <label for="maleDropdown">Male</label>
+                <select id="maleDropdown" name="male-options" onchange="toggleGroomOptions()">
+                    <option value="groom">Select</option>
+                    <option value="groom">Groom</option>
+                    <option value="groom-mate">Groom Mate</option>
+                </select>
+
+                <!-- Groom Options (Visible when "Groom" is selected) -->
+                <div class="groom-options" id="groomOptions">
+                    <label for="groomSelection">Select Groom Item:</label>
+                    <div>
+                        <input type="radio" id="sherwani" name="groom-item" value="sherwani">
+                        <label for="sherwani">Sherwani</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="coat-pant" name="groom-item" value="coat-pant">
+                        <label for="coat-pant">Coat-Pant</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown for Female -->
+            <div class="dropdown">
+                <label for="femaleDropdown"> Female</label>
+                <select id="femaleDropdown" name="female-options">
+                    <option value="bride">Bride</option>
+                    <option value="bridesmate">Bridesmate</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Toggle the groom options when "Groom" is selected
+        function toggleGroomOptions() {
+            const maleDropdown = document.getElementById("maleDropdown");
+            const groomOptions = document.getElementById("groomOptions");
+
+            if (maleDropdown.value === "groom") {
+                groomOptions.style.display = "block";  // Show groom options
+            } else {
+                groomOptions.style.display = "none";   // Hide groom options
+            }
+        }
+
+        // Initially hide the groom options
+        window.onload = function() {
+            document.getElementById("groomOptions").style.display = "none";
+        };
+    </script>
+</body>
+</html>
 
