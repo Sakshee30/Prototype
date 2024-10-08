@@ -1,1 +1,61 @@
-f
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender Dropdown</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Dropdown for Male -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="toggleMaleDropdown()">Male</button>
+            <div class="dropdown-content" id="maleDropdown">
+                <button class="option-btn" onclick="toggleGroomOptions()">Groom</button>
+                <button class="option-btn" onclick="alert('Groom Mate selected')">Groom Mate</button>
+                <div class="groom-options" id="groomOptions">
+                    <button class="groom-item" onclick="alert('Sherwani selected')">Sherwani</button>
+                    <button class="groom-item" onclick="alert('Coat-Pant selected')">Coat-Pant</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dropdown for Female -->
+        <div class="dropdown">
+            <button class="dropbtn">Female</button>
+            <div class="dropdown-content">
+                <a href="#">Bride</a>
+                <a href="#">Bridesmate</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle the male dropdown
+        function toggleMaleDropdown() {
+            const dropdown = document.getElementById("maleDropdown");
+            dropdown.classList.toggle("show");
+        }
+
+        // Toggle the groom options
+        function toggleGroomOptions() {
+            const groomOptions = document.getElementById("groomOptions");
+            groomOptions.classList.toggle("show-groom-options");
+        }
+
+        // Close the dropdown if clicked outside
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.matches('.option-btn')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('show');
+                }
+                // Also close the groom options
+                const groomOptions = document.getElementById("groomOptions");
+                groomOptions.classList.remove('show-groom-options');
+            }
+        }
+    </script>
+</body>
+</html>f
