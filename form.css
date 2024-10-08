@@ -1,1 +1,82 @@
 
+
+/* Style for the dropdown containers */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style for the dropdown buttons */
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for option buttons */
+  .option-btn {
+    background-color: #008CBA; /* Different background color for option buttons */
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin: 4px 0; /* Add some margin between the buttons */
+    display: block; /* Make the buttons block elements */
+  }
+  
+  /* Style for groom item buttons */
+  .groom-item {
+    background-color: #f44336; /* Different background color for groom items */
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin: 4px 0; /* Add some margin between the buttons */
+    display: block; /* Make the buttons block elements */
+  }
+  
+  /* Style for dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Style for links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change link background on hover */
+  .dropdown-content a:hover,
+  .option-btn:hover,
+  .groom-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Show dropdown content when clicking on dropdown button */
+  .show {
+    display: block;
+  }
+  
+  /* Style for the groom options (hidden by default) */
+  .groom-options {
+    display: none; /* Hidden by default */
+    padding-left: 20px; /* Indent for the groom options */
+  }
+  
+  /* Show groom options when clicked */
+  .show-groom-options {
+    display: block;
+  }
